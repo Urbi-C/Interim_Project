@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-commerce</title>
+    <link rel="stylesheet" href="styleproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">E-Commerce Brand</div>
+        <nav class="top-nav">
+            <a href="login.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#" class="active-nav"><i class="fas fa-box-open"></i> Products</a>
+            <a href="mycart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
+
+    <nav class="primary-navbar">
+        <a href="#" class="nav-category active">All Products</a>
+        <a href="#" class="nav-category">Electronics</a>
+        <a href="#" class="nav-category">Apparel</a>
+        <a href="#" class="nav-category">Home Goods</a>
+        <a href="#" class="nav-category">Accessories</a>
+        <a href="#" class="nav-category">Sale <i class="fas fa-tag"></i></a>
+    </nav>
+
+    <div class="container-full">
+        <main class="products-main">
+            
+            <h1>Products</h1>
+            <p>Browse our latest and most popular items.</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-media">
+                        <img src="https://via.placeholder.com/150x150?text=P+1" alt="Smart Watch">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Electronics</span>
+                        <h3>Smart Watch Pro 5000 (ID: 101)</h3>
+                        <p class="product-description">
+                            **Description:** A sleek, water-resistant smartwatch with advanced health tracking and a 5-day battery life.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">₹ 4,999</span>
+                            <span class="product-stock in-stock">In Stock</span>
+                            <button class="btn-action">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-media">
+                        <img src="https://via.placeholder.com/150x150?text=P+2" alt="Leather Wallet">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Accessories</span>
+                        <h3>Premium Leather Wallet (ID: 205)</h3>
+                        <p class="product-description">
+                            **Description:** Genuine tanned leather wallet with RFID protection. Perfect gift idea. Available in Brown and Black.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">₹ 1,250</span>
+                            <span class="product-stock low-stock">Low Stock</span>
+                            <button class="btn-action">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-media">
+                        <img src="https://via.placeholder.com/150x150?text=P+3" alt="Coffee Maker">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-category">Home Goods</span>
+                        <h3>Automatic Coffee Maker (ID: 310)</h3>
+                        <p class="product-description">
+                            **Description:** Programmable 12-cup coffee machine with a thermal carafe to keep coffee hot for hours.
+                        </p>
+                        <div class="product-footer">
+                            <span class="product-price">₹ 3,500</span>
+                            <span class="product-stock out-of-stock">Out of Stock</span>
+                            <button class="btn-action" disabled>
+                                <i class="fas fa-times-circle"></i> Out of Stock
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+        </main>
+    </div>
+
+</body>
+</html>

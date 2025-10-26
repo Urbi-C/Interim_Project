@@ -1,0 +1,133 @@
+/* --- Global Styles and Background --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Use a light gradient or solid color for a clean, professional look */
+    background-color: #f0f2f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Container for Centering --- */
+.login-container {
+    width: 100%;
+    max-width: 400px; /* Limits the maximum width of the card */
+    padding: 20px;
+}
+
+/* --- Login Card Styling --- */
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-card h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-card p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* --- Form Group Styling --- */
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff; /* Focus color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* --- Forgot Password Link --- */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* --- Sign In Button Styling --- */
+.btn-signin {
+    /* Uses the red from your original image as a primary action color */
+    background-color: #dc3545; 
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.1s;
+    text-transform: uppercase;
+}
+
+.btn-signin:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+/* --- Sign Up Link Styling --- */
+.signup-link {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.signup-link a {
+    color: #007bff; /* A distinct action color for signing up */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

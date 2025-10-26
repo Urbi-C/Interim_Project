@@ -1,0 +1,162 @@
+/* --- Global Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Light background */
+    color: #333;
+}
+
+/* --- 1. Header Styling --- */
+.main-header {
+    background-color: #007bff; /* Primary Brand Color (Blue) */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.top-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-nav i {
+    margin-right: 5px;
+}
+
+/* --- Layout Container (Sidebar + Main Content) --- */
+.container {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Adjust height based on header size */
+}
+
+/* --- 2. Sidebar Styling --- */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-nav a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.profile-nav a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.profile-nav a.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-nav a i {
+    margin-right: 10px;
+    width: 20px; /* Aligns icons nicely */
+}
+
+/* --- 3. Main Content Styling --- */
+.profile-content {
+    flex-grow: 1; /* Takes up remaining space */
+    padding: 40px;
+}
+
+.profile-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-content p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.profile-form {
+    max-width: 500px; /* Limits form width for better readability */
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* --- Button Styling (Update Profile) --- */
+.btn-primary {
+    background-color: #dc3545; /* Red/Action Color (like the original image) */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,235 @@
+/* --- Primary Navbar Styling (Category Links) --- */
+.primary-navbar {
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center; /* Center the category links */
+    padding: 10px 0;
+}
+
+.nav-category {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-category:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-category.active {
+    color: #007bff; /* Primary brand color for the active category */
+    border-bottom: 3px solid #007bff;
+    background-color: transparent; /* Keep background clean */
+    padding-bottom: 7px; /* Adjust padding due to border */
+}
+
+.nav-category i {
+    color: #dc3545; /* Red color for 'Sale' icon */
+    margin-left: 5px;
+}
+
+/* --- Responsive Adjustments for Navbar --- */
+@media (max-width: 768px) {
+    .primary-navbar {
+        justify-content: flex-start; /* Align left */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        padding: 10px;
+    }
+
+    .nav-category {
+        flex-shrink: 0; /* Prevents buttons from collapsing */
+    }
+}
+
+/* --- Reused Header and Base Styles (Ensure these are present from previous examples) --- */
+/* (Header styles should be copied here if starting fresh, or assumed to exist) */
+
+body {
+    background-color: #f4f7f9;
+    font-family: Arial, sans-serif;
+}
+
+.container-full {
+    padding: 30px 40px;
+}
+
+.products-main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.products-main p {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* --- Product Grid Container --- */
+.product-grid {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px;
+    max-width: 1000px; /* Optional: limit width of the entire list */
+    margin: 0 auto; /* Center the list */
+}
+
+/* --- Product Card Styling (Image Icon with Description on Side) --- */
+.product-card {
+    display: flex; /* Makes image and details side-by-side */
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.product-media {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.product-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    flex-grow: 1; /* Allows details section to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out description and footer */
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.product-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* --- Footer for Price, Stock, and Action --- */
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #dc3545; /* Red for price */
+}
+
+.product-stock {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.in-stock {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.low-stock {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.out-of-stock {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.btn-action {
+    background-color: #28a745; /* Green for add to cart */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-action:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.btn-action:disabled {
+    background-color: #6c757d; /* Gray out if disabled */
+    cursor: not-allowed;
+}
+
+.btn-action i {
+    margin-right: 5px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 650px) {
+    .product-card {
+        flex-direction: column; /* Stack image and details vertically */
+        text-align: center;
+    }
+
+    .product-media {
+        margin: 0 auto 15px auto; /* Center image */
+    }
+
+    .product-details {
+        text-align: left; /* Keep text alignment readable */
+    }
+    
+    .product-footer {
+        flex-direction: column; /* Stack footer elements vertically */
+        align-items: stretch;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .product-stock {
+        margin: 5px 0;
+    }
+    
+    .product-price {
+        order: -1; /* Move price to the top of the footer stack */
+    }
+}

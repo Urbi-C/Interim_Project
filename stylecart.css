@@ -1,0 +1,414 @@
+/* --- Global Reset & Base Styles (from previous example) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Light background */
+    color: #333;
+}
+
+/* --- 1. Header Styling (from previous example - slight modification) --- */
+.main-header {
+    background-color: #007bff; /* Primary Brand Color (Blue) */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px; /* Slightly more padding for buttons */
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.top-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Added for active navigation state */
+.top-nav a.active-nav {
+    background-color: #ffc107; /* A contrasting color to highlight active page */
+    color: #333;
+    font-weight: bold;
+}
+
+.top-nav a.active-nav:hover {
+    background-color: #e0a800; /* Darker hover for active */
+}
+
+
+.top-nav i {
+    margin-right: 8px; /* Adjusted margin */
+}
+
+/* --- Layout Container (from previous example) --- */
+.container {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Adjust height based on header size */
+    padding: 0; /* Remove padding if you don't want sidebar */
+}
+
+/* Removed .sidebar and .profile-nav for cart page as it's full width */
+/* You'll keep these for profile.html but omit for cart.html if using separate layouts */
+
+
+/* --- Cart Page Specific Styling --- */
+.cart-content {
+    flex-grow: 1;
+    padding: 30px 40px; /* Padding for the main cart area */
+}
+
+.breadcrumbs {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.breadcrumbs a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.cart-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cart-content p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.cart-layout {
+    display: flex;
+    gap: 30px; /* Space between cart items and summary */
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+.cart-items {
+    flex: 3; /* Cart items take up more space */
+    min-width: 600px; /* Minimum width for cart items section */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 90px 2fr 1fr 1fr 1fr 1fr; /* Adjust columns as needed */
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.cart-header-item {
+    text-align: center;
+}
+.cart-header-item.item-details { text-align: left; } /* Align product details left */
+
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 90px 2fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.item-details h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.item-details p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.item-price, .item-total {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-quantity input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 5px;
+    appearance: textfield; /* Hide number input arrows for Firefox */
+}
+.item-quantity input::-webkit-outer-spin-button,
+.item-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Hide number input arrows for Chrome/Safari */
+    margin: 0;
+}
+
+
+.quantity-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    color: #555;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #ddd;
+}
+
+.item-action {
+    text-align: center;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #dc3545; /* Red for remove action */
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.remove-btn:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
+
+.remove-btn i {
+    margin-right: 5px;
+}
+
+.cart-actions-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray for secondary action */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-secondary i {
+    margin-right: 8px;
+}
+
+/* --- Cart Summary Styling --- */
+.cart-summary {
+    flex: 1; /* Summary takes up less space */
+    min-width: 300px; /* Minimum width for summary section */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    height: fit-content; /* Adjust height to content */
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.summary-line.total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+.btn-primary-checkout {
+    background-color: #28a745; /* Green for primary checkout action */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 25px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+}
+
+.btn-primary-checkout:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.payment-methods {
+    margin-top: 25px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.payment-methods i {
+    font-size: 2.2em;
+    margin: 0 5px;
+    color: #aaa;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .cart-layout {
+        flex-direction: column; /* Stack cart items and summary vertically */
+    }
+
+    .cart-items, .cart-summary {
+        min-width: auto; /* Remove min-width to allow full width */
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .top-nav {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
+    .top-nav a {
+        margin: 0 5px;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    .cart-content {
+        padding: 20px;
+    }
+
+    .cart-header, .cart-item {
+        grid-template-columns: 80px 1.5fr 1fr 0.8fr 1fr 1fr; /* Adjust columns */
+        gap: 10px;
+    }
+
+    .item-image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details h3 {
+        font-size: 1em;
+    }
+
+    .remove-btn {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-header, .cart-item {
+        grid-template-columns: 60px 1fr 0.8fr 0.8fr 1fr; /* Remove action column for smaller view, maybe put remove on new line */
+        position: relative; /* For more flexible layout */
+        padding-bottom: 50px; /* Space for action buttons */
+    }
+    .cart-header-item.item-action, .item-action {
+        display: none; /* Hide action column */
+    }
+    .item-details {
+        grid-column: span 2; /* Make details span more */
+    }
+    .item-action {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        left: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .remove-btn {
+        background-color: #dc3545;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+    .remove-btn:hover {
+        background-color: #c82333;
+    }
+}
